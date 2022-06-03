@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACME.Backend.Entities\ACME.Backend.Entities.csproj" />
+    <ProjectReference Include="..\ACME.Backend.Interfaces\ACME.Backend.Interfaces.csproj" />
+    <ProjectReference Include="..\ACME.Backend.Repository.InMemory\ACME.Backend.Repository.InMemory.csproj" />
+    <ProjectReference Include="..\ACME.Backend.Repository.SqlServer\ACME.Backend.Repository.SqlServer.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+	<InternalsVisibleTo Include="ACME.Frontend.IntegrationTests" />
+  </ItemGroup>
+
+</Project>

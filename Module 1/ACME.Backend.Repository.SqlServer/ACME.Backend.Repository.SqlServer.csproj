@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACME.Backend.Interfaces\ACME.Backend.Interfaces.csproj" />
+    <ProjectReference Include="..\ACME.Backend.EntityFramework\ACME.Backend.EntityFramework.csproj" />
+    <ProjectReference Include="..\ACME.Backend.Entities\ACME.Backend.Entities.csproj" />
+    <ProjectReference Include="..\ACME.Backend.Repository\ACME.Backend.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Client</title>
+    </head>
+    <body>
+        <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+        ?response_type=token
+        &client_id=5499342e-6248-4b7b-90d2-2f243aa931ef
+        &redirect_uri=https://localhost:7038/index.html
+        &scope=api://5499342e-6248-4b7b-90d2-2f243aa931ef/Leest
+        &response_mode=fragment&state=12345&nonce=678910">Login</a>
+
+        <script>
+            
+            let arr = window.location.hash.substring(1).split("&");
+            let token = arr[0].split("=")[1];
+            console.log(token);
+
+            fetch("https://localhost:7090/weatherforecast", {
+                headers:{
+                    "Authorization": "Bearer " + token
+                }
+            }).then(resp=>console.log(resp));
+        </script>
+    </body>
+</html>
